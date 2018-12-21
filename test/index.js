@@ -13,7 +13,7 @@ fs.writeFileSync(mapPath, JSON.stringify(map, null, 2))
 
 async function tryAllVersions(generatedSource, map) {
   console.log("version1\n", await getObjectMappingV1(generatedSource, map))
-  console.log("version2\n", await getObjectMappingV2.withSourceMapModuleAdaptor(generatedSource, map))
+  console.log("version2\n", JSON.stringify(await getObjectMappingV2.withSourceMapModuleAdaptor(generatedSource, map), null, 2))
 }
 
 tryAllVersions(generatedSource, map)

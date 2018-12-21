@@ -49,9 +49,14 @@ module.exports = function (generatedSource, getOriginalPositionFor) {
     }
 
     if (!originalObjectTokenToGeneratedPropertyToken[originalObjectToken]) {
-      originalObjectTokenToGeneratedPropertyToken[originalObjectToken] = new Set()
+      originalObjectTokenToGeneratedPropertyToken[originalObjectToken] = {}
     }
-    originalObjectTokenToGeneratedPropertyToken[originalObjectToken].add(generatedProperty)
+    if (!originalObjectTokenToGeneratedPropertyToken[originalObjectToken][generatedProperty]) {
+      originalObjectTokenToGeneratedPropertyToken[originalObjectToken][generatedProperty] = []
+    }
+    if (!originalObjectTokenToGeneratedPropertyToken[originalObjectToken][generatedProperty].includes(propertyPos.name)) {
+      originalObjectTokenToGeneratedPropertyToken[originalObjectToken][generatedProperty].push(propertyPos.name)
+    }
   }
 
   return originalObjectTokenToGeneratedPropertyToken

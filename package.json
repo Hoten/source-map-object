@@ -1,0 +1,22 @@
+{
+  "name": "source-map-objects",
+  "version": "1.0.0",
+  "main": "src/version2.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.11.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "source-map": "^0.7.3"
+  },
+  "scripts": {
+    "test": "rimraf test/app-dist && parcel build test/app/index.html -d test/app-dist && node test/index.js",
+    "build": "rimraf dist && parcel build src/version2.js -d dist -o index.js"
+  },
+  "alias": {
+    "source-map": false
+  }
+}

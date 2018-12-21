@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "sources": [
+    "index.js"
+  ],
+  "names": [
+    "someObject",
+    "getStuff",
+    "console",
+    "log",
+    "getOtherStuff",
+    "someObject2",
+    "loooooonngKey",
+    "anotherLoooooongKey",
+    "oneMoreLoooooongKey",
+    "doesNotExist"
+  ],
+  "mappings": ";AAAA,MAAMA,WAAa,CACjBC,IACEC,QAAQC,IAAI,UAEdC,IACOH,KAAAA,MAITD,WAAWC,IACXD,WAAWI,IAEX,MAAMC,YAAc,CACpBA,EAA4B,IAC5BA,YAAYC,EAAcC,EAAsB,QAChDF,YAAYC,EAAcE,EAAsB,SAChDN,QAAQC,IAAIE,YAAYC,EAAcC,GACtCL,QAAQC,IAAIE,YAAYC,EAAcG",
+  "file": "app.5753e952.map",
+  "sourceRoot": "../app",
+  "sourcesContent": [
+    "const someObject = {\n  getStuff() {\n    console.log('stuff')\n  },\n  getOtherStuff() {\n    this.getStuff()\n  },\n}\n\nsomeObject.getStuff()\nsomeObject.getOtherStuff()\n\nconst someObject2 = {}\nsomeObject2.loooooonngKey = {}\nsomeObject2.loooooonngKey.anotherLoooooongKey = 'value'\nsomeObject2.loooooonngKey.oneMoreLoooooongKey = 'value2'\nconsole.log(someObject2.loooooonngKey.anotherLoooooongKey)\nconsole.log(someObject2.loooooonngKey.doesNotExist)\n"
+  ]
+}
